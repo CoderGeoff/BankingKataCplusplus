@@ -8,6 +8,7 @@
 
 #include <fakeit.hpp>
 
+using namespace fakeit;
 class AccountSummaryReaderStub : public IAccountSummaryReader
 {
 	int m_CurrentBalanceInPence;
