@@ -10,18 +10,6 @@
 
 using namespace fakeit;
 
-class AccountSummaryReaderStub : public IAccountSummaryReader
-{
-	int m_CurrentBalanceInPence;
-public: 
-	AccountSummaryReaderStub() : m_CurrentBalanceInPence(0) {}
-	int CurrentBalance() const { return m_CurrentBalanceInPence; };
-	virtual void CurrentBalance(int currentBalanceInPence)
-	{
-		m_CurrentBalanceInPence = currentBalanceInPence;
-	}
-};
-
 TEST(AccountSummaryTest, ShouldReadCurrentBalance)
 {
 	// Arrange
