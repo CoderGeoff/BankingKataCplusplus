@@ -6,6 +6,8 @@
 #include "IAccountSummaryReader.h"
 #include "BankingCplusPlus.h"
 
+#include <fakeit.hpp>
+
 class AccountSummaryReaderStub : public IAccountSummaryReader
 {
 	int m_CurrentBalanceInPence;
