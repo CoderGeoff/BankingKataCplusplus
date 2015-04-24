@@ -27,6 +27,12 @@
     <ClInclude Include="IAccountSummaryReader.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="ILedgerEntryReader.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="LedgerEntry.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -39,6 +45,12 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="IAccountSummaryReader.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ILedgerEntryReader.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="LedgerEntry.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
