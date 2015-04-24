@@ -20,7 +20,7 @@ public:
 
 TEST(AccountSummaryTest, ShouldReadCurrentBalance)
 {
-	auto reader = new AccountSummaryReaderStub();
+	auto reader = std::make_shared<AccountSummaryReaderStub>();
 	ReadAccountSummary(reader);
 	EXPECT_EQ(30, reader->CurrentBalance());
 }
