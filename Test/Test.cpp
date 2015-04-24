@@ -13,29 +13,27 @@ using namespace fakeit;
 TEST(AccountSummaryTest, ShouldReadCurrentBalance)
 {
 	// Arrange
-	Mock<IAccountSummaryReader> mockReader;
-	IAccountSummaryReader& reader = mockReader.get();
-	When(Method(mockReader, CurrentBalance)).Return();
-	When(Method(mockReader, LastTransaction)).Return();
+	Mock<IAccountSummaryReader> reader;
+	When(Method(reader, CurrentBalance)).Return();
+	When(Method(reader, LastTransaction)).Return();
 
 	// Act
-	ReadAccountSummary(reader);
+	ReadAccountSummary(reader.get());
 
 	// Assert
-	Verify(Method(mockReader, CurrentBalance).Using(30.0)).Exactly(Once);
+	Verify(Method(reader, CurrentBalance).Using(30.0)).Exactly(Once);
 }
 
 TEST(AccountSummaryTest, ShouldReadLastTransaction)
 {
 	// Arrange
-	Mock<IAccountSummaryReader> mockReader;
-	IAccountSummaryReader& reader = mockReader.get();
-	When(Method(mockReader, CurrentBalance)).Return();
-	When(Method(mockReader, LastTransaction)).Return();
+	Mock<IAccountSummaryReader> reader;
+	When(Method(reader, CurrentBalance)).Return();
+	When(Method(reader, LastTransaction)).Return();
 
 	// Act
-	ReadAccountSummary(reader);
+	ReadAccountSummary(reader.get());
 
 	// Assert
-	Verify(Method(mockReader, LastTransaction)).Exactly(Once);
+	Verify(Method(reader, LastTransaction)).Exactly(Once);
 }
