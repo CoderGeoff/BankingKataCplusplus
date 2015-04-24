@@ -86,6 +86,14 @@
     </ClCompile>
     <ClCompile Include="Test.cpp" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BankingCPlusPlus\BankingCPlusPlus.vcxproj">
+      <Project>{2183dfcd-9e23-43cf-a357-8486255d74a6}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\GoogleTest\GoogleTest.vcxproj">
+      <Project>{20a878d1-d277-4508-a35e-c871407df9fd}</Project>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
