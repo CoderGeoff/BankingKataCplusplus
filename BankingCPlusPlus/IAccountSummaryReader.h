@@ -7,7 +7,7 @@
 
 class LedgerEntry;
 
-BANKINGCPLUSPLUS_API class IAccountSummaryReader
+class BANKINGCPLUSPLUS_API IAccountSummaryReader
 {
 public:
 	virtual void CurrentBalance(int balanceInPence) = 0;

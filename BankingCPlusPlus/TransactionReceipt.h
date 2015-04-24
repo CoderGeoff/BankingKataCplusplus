@@ -5,11 +5,11 @@
 #define BANKINGCPLUSPLUS_API __declspec(dllimport)
 #endif
 
-class ILedgerEntryReader;
+class ITransactionReceiptReader;
 
-class BANKINGCPLUSPLUS_API LedgerEntry
+class BANKINGCPLUSPLUS_API TransactionReceipt
 {
 public:
-	void Read(ILedgerEntryReader* reader) const;
+	void Read(ITransactionReceiptReader& reader) const;
 };
 

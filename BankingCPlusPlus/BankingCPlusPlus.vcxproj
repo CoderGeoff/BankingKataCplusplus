@@ -77,9 +77,11 @@
     <ClInclude Include="BankingCPlusPlus.h" />
     <ClInclude Include="IAccountSummaryReader.h" />
     <ClInclude Include="ILedgerEntryReader.h" />
+    <ClInclude Include="ITransactionReceiptReader.h" />
     <ClInclude Include="LedgerEntry.h" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="targetver.h" />
+    <ClInclude Include="TransactionReceipt.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="BankingCPlusPlus.cpp" />
@@ -93,11 +95,13 @@
     </ClCompile>
     <ClCompile Include="IAccountSummaryReader.cpp" />
     <ClCompile Include="ILedgerEntryReader.cpp" />
+    <ClCompile Include="ITransactionReceiptReader.cpp" />
     <ClCompile Include="LedgerEntry.cpp" />
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
     </ClCompile>
+    <ClCompile Include="TransactionReceipt.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

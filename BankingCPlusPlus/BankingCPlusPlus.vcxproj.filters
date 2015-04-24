@@ -33,6 +33,12 @@
     <ClInclude Include="LedgerEntry.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="TransactionReceipt.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ITransactionReceiptReader.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -51,6 +57,12 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="LedgerEntry.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="TransactionReceipt.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ITransactionReceiptReader.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

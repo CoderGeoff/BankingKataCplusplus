@@ -1,7 +1,7 @@
 #include "stdafx.h"
 #include "gtest/gtest.h"
-#include "IAccountSummaryReader.h"
 #include "BankingCplusPlus.h"
+#include "IAccountSummaryReader.h"
 
 #include <fakeit.hpp>
 

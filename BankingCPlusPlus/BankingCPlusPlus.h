@@ -10,9 +10,13 @@
 #define BANKINGCPLUSPLUS_API __declspec(dllimport)
 #endif
 
+#include <memory>
+
 class IAccountSummaryReader;
+class TransactionReceipt;
 
 BANKINGCPLUSPLUS_API void ReadAccountSummary(IAccountSummaryReader& reader);
+BANKINGCPLUSPLUS_API TransactionReceipt DepositCash(int amountInPence);
 
 extern BANKINGCPLUSPLUS_API int nBankingCPlusPlus;
 

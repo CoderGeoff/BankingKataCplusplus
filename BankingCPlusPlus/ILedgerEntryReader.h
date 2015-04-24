@@ -7,7 +7,7 @@
 
 #include <string>
 
-BANKINGCPLUSPLUS_API class ILedgerEntryReader
+class BANKINGCPLUSPLUS_API ILedgerEntryReader
 {
 public:
 	virtual void Date(const std::string& date) = 0;

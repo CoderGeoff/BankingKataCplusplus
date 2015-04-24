@@ -5,6 +5,7 @@
 #include "BankingCPlusPlus.h"
 #include "IAccountSummaryReader.h"
 #include "LedgerEntry.h"
+#include "TransactionReceipt.h"
 
 // This is an example of an exported variable
 BANKINGCPLUSPLUS_API int nBankingCPlusPlus=0;
@@ -16,8 +17,14 @@ BANKINGCPLUSPLUS_API int fnBankingCPlusPlus(void)
 }
 
 
-void ReadAccountSummary(IAccountSummaryReader& reader)
+BANKINGCPLUSPLUS_API void ReadAccountSummary(IAccountSummaryReader& reader)
 {
 	reader.CurrentBalance(30);
 	reader.LastTransaction(new LedgerEntry());
+}
+
+BANKINGCPLUSPLUS_API TransactionReceipt DepositCash(int amountInPence)
+{
+	TransactionReceipt receipt;
+	return receipt;
 }
