@@ -4,7 +4,7 @@
 #include "stdafx.h"
 #include "BankingCPlusPlus.h"
 #include "IAccountSummaryReader.h"
-
+#include "LedgerEntry.h"
 
 // This is an example of an exported variable
 BANKINGCPLUSPLUS_API int nBankingCPlusPlus=0;
@@ -19,4 +19,5 @@ BANKINGCPLUSPLUS_API int fnBankingCPlusPlus(void)
 void ReadAccountSummary(IAccountSummaryReader& reader)
 {
 	reader.CurrentBalance(30);
+	reader.LastTransaction(new LedgerEntry());
 }
