@@ -9,13 +9,9 @@
 #else
 #define BANKINGCPLUSPLUS_API __declspec(dllimport)
 #endif
+class IAccountSummaryReader;
 
-// This class is exported from the BankingCPlusPlus.dll
-class BANKINGCPLUSPLUS_API CBankingCPlusPlus {
-public:
-	CBankingCPlusPlus(void);
-	// TODO: add your methods here.
-};
+BANKINGCPLUSPLUS_API void ReadAccountSummary(IAccountSummaryReader* reader);
 
 extern BANKINGCPLUSPLUS_API int nBankingCPlusPlus;
 

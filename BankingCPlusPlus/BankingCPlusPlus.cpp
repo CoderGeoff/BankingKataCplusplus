@@ -3,6 +3,7 @@
 
 #include "stdafx.h"
 #include "BankingCPlusPlus.h"
+#include "IAccountSummaryReader.h"
 
 
 // This is an example of an exported variable
@@ -14,9 +15,8 @@ BANKINGCPLUSPLUS_API int fnBankingCPlusPlus(void)
 	return 42;
 }
 
-// This is the constructor of a class that has been exported.
-// see BankingCPlusPlus.h for the class definition
-CBankingCPlusPlus::CBankingCPlusPlus()
+
+void ReadAccountSummary(IAccountSummaryReader* reader)
 {
-	return;
+	reader->CurrentBalance(30);
 }
