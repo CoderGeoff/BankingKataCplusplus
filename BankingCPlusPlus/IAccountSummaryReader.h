@@ -8,7 +8,6 @@
 BANKINGCPLUSPLUS_API class IAccountSummaryReader
 {
 public:
-
 	virtual void CurrentBalance(int balanceInPence) = 0;
 
 };

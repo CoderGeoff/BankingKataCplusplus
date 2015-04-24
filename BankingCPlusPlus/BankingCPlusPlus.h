@@ -10,11 +10,9 @@
 #define BANKINGCPLUSPLUS_API __declspec(dllimport)
 #endif
 
-#include <memory>
-
 class IAccountSummaryReader;
 
-BANKINGCPLUSPLUS_API void ReadAccountSummary(std::shared_ptr<IAccountSummaryReader> reader);
+BANKINGCPLUSPLUS_API void ReadAccountSummary(IAccountSummaryReader& reader);
 
 extern BANKINGCPLUSPLUS_API int nBankingCPlusPlus;
 

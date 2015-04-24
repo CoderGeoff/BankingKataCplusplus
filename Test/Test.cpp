@@ -9,6 +9,7 @@
 #include <fakeit.hpp>
 
 using namespace fakeit;
+
 class AccountSummaryReaderStub : public IAccountSummaryReader
 {
 	int m_CurrentBalanceInPence;
@@ -23,7 +24,14 @@ public:
 
 TEST(AccountSummaryTest, ShouldReadCurrentBalance)
 {
-	auto reader = std::make_shared<AccountSummaryReaderStub>();
+	// Arrange
+	Mock<IAccountSummaryReader> mockReader;
+	IAccountSummaryReader& reader = mockReader.get();
+	When(Method(mockReader, CurrentBalance)).Return();
+
+	// Act
 	ReadAccountSummary(reader);
-	EXPECT_EQ(30, reader->CurrentBalance());
+
+	// Assert
+	Verify(Method(mockReader, CurrentBalance).Using(30.0)).Exactly(Once);
 }

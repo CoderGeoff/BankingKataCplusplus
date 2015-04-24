@@ -16,7 +16,7 @@ BANKINGCPLUSPLUS_API int fnBankingCPlusPlus(void)
 }
 
 
-void ReadAccountSummary(std::shared_ptr<IAccountSummaryReader> reader)
+void ReadAccountSummary(IAccountSummaryReader& reader)
 {
-	reader->CurrentBalance(30);
+	reader.CurrentBalance(30);
 }
