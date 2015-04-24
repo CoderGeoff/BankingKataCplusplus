@@ -28,10 +28,26 @@ TEST(AccountSummaryTest, ShouldReadCurrentBalance)
 	Mock<IAccountSummaryReader> mockReader;
 	IAccountSummaryReader& reader = mockReader.get();
 	When(Method(mockReader, CurrentBalance)).Return();
+	When(Method(mockReader, LastTransaction)).Return();
 
 	// Act
 	ReadAccountSummary(reader);
 
 	// Assert
 	Verify(Method(mockReader, CurrentBalance).Using(30.0)).Exactly(Once);
+}
+
+TEST(AccountSummaryTest, ShouldReadLastTransaction)
+{
+	// Arrange
+	Mock<IAccountSummaryReader> mockReader;
+	IAccountSummaryReader& reader = mockReader.get();
+	When(Method(mockReader, CurrentBalance)).Return();
+	When(Method(mockReader, LastTransaction)).Return();
+
+	// Act
+	ReadAccountSummary(reader);
+
+	// Assert
+	Verify(Method(mockReader, LastTransaction)).Exactly(Once);
 }
