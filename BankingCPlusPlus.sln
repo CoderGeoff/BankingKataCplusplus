@@ -7,11 +7,17 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "BankingCPlusPlus", "Banking
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Test", "Test\Test.vcxproj", "{FF5E7F6B-B10C-4038-9875-B9C445FC18B2}"
 	ProjectSection(ProjectDependencies) = postProject
+		{A800830D-7AA3-49A9-9066-5397B8225E78} = {A800830D-7AA3-49A9-9066-5397B8225E78}
 		{2183DFCD-9E23-43CF-A357-8486255D74A6} = {2183DFCD-9E23-43CF-A357-8486255D74A6}
 		{20A878D1-D277-4508-A35E-C871407DF9FD} = {20A878D1-D277-4508-A35E-C871407DF9FD}
 	EndProjectSection
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "GoogleTest", "GoogleTest\GoogleTest.vcxproj", "{20A878D1-D277-4508-A35E-C871407DF9FD}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "GoogleMock", "GoogleMock\GoogleMock.vcxproj", "{A800830D-7AA3-49A9-9066-5397B8225E78}"
+	ProjectSection(ProjectDependencies) = postProject
+		{20A878D1-D277-4508-A35E-C871407DF9FD} = {20A878D1-D277-4508-A35E-C871407DF9FD}
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -31,6 +37,10 @@ Global
 		{20A878D1-D277-4508-A35E-C871407DF9FD}.Debug|Win32.Build.0 = Debug|Win32
 		{20A878D1-D277-4508-A35E-C871407DF9FD}.Release|Win32.ActiveCfg = Release|Win32
 		{20A878D1-D277-4508-A35E-C871407DF9FD}.Release|Win32.Build.0 = Release|Win32
+		{A800830D-7AA3-49A9-9066-5397B8225E78}.Debug|Win32.ActiveCfg = Debug|Win32
+		{A800830D-7AA3-49A9-9066-5397B8225E78}.Debug|Win32.Build.0 = Debug|Win32
+		{A800830D-7AA3-49A9-9066-5397B8225E78}.Release|Win32.ActiveCfg = Release|Win32
+		{A800830D-7AA3-49A9-9066-5397B8225E78}.Release|Win32.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
