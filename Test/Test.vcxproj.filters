@@ -27,6 +27,9 @@
     <ClInclude Include="MockTransactionReceiptReader.h">
       <Filter>Mocks</Filter>
     </ClInclude>
+    <ClInclude Include="MockAccountSummaryReader.h">
+      <Filter>Mocks</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -39,6 +42,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="MockTransactionReceiptReader.cpp">
+      <Filter>Mocks</Filter>
+    </ClCompile>
+    <ClCompile Include="MockAccountSummaryReader.cpp">
       <Filter>Mocks</Filter>
     </ClCompile>
   </ItemGroup>

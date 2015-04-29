@@ -1,19 +1,12 @@
 #include "stdafx.h"
 #include "gtest/gtest.h"
 #include "BankingCplusPlus.h"
-#include "IAccountSummaryReader.h"
+#include "MockAccountSummaryReader.h"
 
 #include <gmock/gmock.h>
 using ::testing::A;
 using ::testing::AtLeast;
 using ::testing::Return;
-
-class MockAccountSummaryReader : public IAccountSummaryReader
-{
-public:
-	MOCK_METHOD1(CurrentBalance, void(int accountBalanceInPence));
-	MOCK_METHOD1(LastTransaction, void(const LedgerEntry* lastTransaction));
-};
 
 TEST(AccountSummaryTest, ShouldReadCurrentBalance)
 {
