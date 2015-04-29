@@ -1,25 +1,26 @@
 #include "stdafx.h"
 #include "gtest/gtest.h"
 #include "BankingCplusPlus.h"
-#include "ITransactionReceiptReader.h"
+#include "gtest/gtest.h"
+#include "gmock/gmock.h"
+
+#include "MockTransactionReceiptReader.h"
 #include "TransactionReceipt.h"
 
-#include <fakeit.hpp>
+using ::testing::AtLeast;
+using ::testing::Return;
 
-using namespace fakeit;
+
 
 TEST(CashUserTransactionTest, ShouldDepositTenPounds)
 {
 	// Arrange
-	Mock<ITransactionReceiptReader> reader;
-	When(Method(reader, Successful)).Return();
-	When(Method(reader, Amount)).Return();
+	MockTransactionReceiptReader reader;
+	EXPECT_CALL(reader, Amount(std::string("1000")))
+		.Times(1)
+		.WillOnce(Return());
 
 	// Act
 	TransactionReceipt receipt = DepositCash(1000);
-	receipt.Read(reader.get());
-
-	// Assert
-	auto methodCalled = Method(reader, Amount).Using("1000");
-	Verify(methodCalled).Exactly(Once);
+	receipt.Read(reader);
 }
