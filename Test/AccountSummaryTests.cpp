@@ -20,6 +20,8 @@ TEST(AccountSummaryTest, ShouldReadCurrentBalance)
 	// Arrange
 	MockAccountSummaryReader reader;
 	const int testBalance = 1;
+
+	// Set Expectation
 	EXPECT_CALL(reader, CurrentBalance(30))
 		.Times(1)
 		.WillOnce(Return());
@@ -33,6 +35,8 @@ TEST(AccountSummaryTest, ShouldReadLastTransaction)
 	// Arrange
 	MockAccountSummaryReader reader;
 	const int testBalance = 1;
+
+	// Set Expectation
 	EXPECT_CALL(reader, LastTransaction(A<const LedgerEntry*>()))
 		.Times(1)
 		.WillOnce(Return());

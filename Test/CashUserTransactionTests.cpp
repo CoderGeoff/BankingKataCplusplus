@@ -16,6 +16,8 @@ TEST(CashUserTransactionTest, ShouldDepositTenPounds)
 {
 	// Arrange
 	MockTransactionReceiptReader reader;
+
+	// Set Expectation
 	EXPECT_CALL(reader, Amount(std::string("1000")))
 		.Times(1)
 		.WillOnce(Return());
