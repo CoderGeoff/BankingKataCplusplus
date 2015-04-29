@@ -41,11 +41,11 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
-    <IncludePath>$(SolutionDir)\FakeIt-2.0.1\config\gtest;$(SolutionDir)\FakeIt-2.0.1\include;$(SolutionDir)\BankingCPlusPlus;$(SolutionDir)\gtest-1.7.0\include;$(SolutionDir)\gtest-1.7.0;$(IncludePath)</IncludePath>
+    <IncludePath>$(SolutionDir)\FakeIt-2.0.1\config\gtest;$(SolutionDir)\gmock-1.7.0\include;$(SolutionDir)\FakeIt-2.0.1\include;$(SolutionDir)\BankingCPlusPlus;$(SolutionDir)\gtest-1.7.0\include;$(SolutionDir)\gtest-1.7.0;$(IncludePath)</IncludePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
-    <IncludePath>$(SolutionDir)\FakeIt-2.0.1\config\gtest;$(SolutionDir)\FakeIt-2.0.1\include;$(SolutionDir)\BankingCPlusPlus;$(SolutionDir)\gtest-1.7.0\include;$(SolutionDir)\gtest-1.7.0;$(IncludePath)</IncludePath>
+    <IncludePath>$(SolutionDir)\FakeIt-2.0.1\config\gtest;$(SolutionDir)\gmock-1.7.0\include;$(SolutionDir)\FakeIt-2.0.1\include;$(SolutionDir)\BankingCPlusPlus;$(SolutionDir)\gtest-1.7.0\include;$(SolutionDir)\gtest-1.7.0;$(IncludePath)</IncludePath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
@@ -90,6 +90,9 @@
   <ItemGroup>
     <ProjectReference Include="..\BankingCPlusPlus\BankingCPlusPlus.vcxproj">
       <Project>{2183dfcd-9e23-43cf-a357-8486255d74a6}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\GoogleMock\GoogleMock.vcxproj">
+      <Project>{a800830d-7aa3-49a9-9066-5397b8225e78}</Project>
     </ProjectReference>
     <ProjectReference Include="..\GoogleTest\GoogleTest.vcxproj">
       <Project>{20a878d1-d277-4508-a35e-c871407df9fd}</Project>
