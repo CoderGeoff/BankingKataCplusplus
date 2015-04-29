@@ -4,6 +4,8 @@
 #include "stdafx.h"
 #include "BankingCPlusPlus.h"
 #include "IAccountSummaryReader.h"
+#include "Account.h"
+#include "AccountHandle.h"
 #include "LedgerEntry.h"
 #include "TransactionReceipt.h"
 
@@ -16,10 +18,16 @@ BANKINGCPLUSPLUS_API int fnBankingCPlusPlus(void)
 	return 42;
 }
 
-
-BANKINGCPLUSPLUS_API void ReadAccountSummary(IAccountSummaryReader& reader)
+BANKINGCPLUSPLUS_API AccountHandle OpenAccount()
 {
-	reader.CurrentBalance(30);
+	Account* account = Account::OpenNew();
+	return AccountHandle(*account);
+}
+
+BANKINGCPLUSPLUS_API void ReadAccountSummary(AccountHandle accountHandle, IAccountSummaryReader& reader)
+{
+	auto account = accountHandle.Get();
+	account.ReadCurrentBalance(reader);
 	reader.LastTransaction(new LedgerEntry());
 }
 

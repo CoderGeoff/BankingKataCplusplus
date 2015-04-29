@@ -5,6 +5,7 @@
 
 #include <gmock/gmock.h>
 using ::testing::A;
+using ::testing::An;
 using ::testing::AtLeast;
 using ::testing::Return;
 
@@ -15,12 +16,13 @@ TEST(AccountSummaryTest, ShouldReadCurrentBalance)
 	const int testBalance = 1;
 
 	// Set Expectation
-	EXPECT_CALL(reader, CurrentBalance(30))
+	EXPECT_CALL(reader, CurrentBalance(An<int>()))
 		.Times(1)
 		.WillOnce(Return());
 
 	// Act
-	ReadAccountSummary(reader);
+	AccountHandle account = OpenAccount();
+	ReadAccountSummary(account, reader);
 }
 
 TEST(AccountSummaryTest, ShouldReadLastTransaction)
@@ -35,5 +37,6 @@ TEST(AccountSummaryTest, ShouldReadLastTransaction)
 		.WillOnce(Return());
 
 	// Act
-	ReadAccountSummary(reader);
+	AccountHandle account = OpenAccount();
+	ReadAccountSummary(account, reader);
 }
