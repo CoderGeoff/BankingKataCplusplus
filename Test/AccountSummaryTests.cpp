@@ -3,34 +3,40 @@
 #include "BankingCplusPlus.h"
 #include "IAccountSummaryReader.h"
 
-#include <fakeit.hpp>
+#include <gmock/gmock.h>
+using ::testing::A;
+using ::testing::AtLeast;
+using ::testing::Return;
 
-using namespace fakeit;
+class MockAccountSummaryReader : public IAccountSummaryReader
+{
+public:
+	MOCK_METHOD1(CurrentBalance, void(int accountBalanceInPence));
+	MOCK_METHOD1(LastTransaction, void(const LedgerEntry* lastTransaction));
+};
 
 TEST(AccountSummaryTest, ShouldReadCurrentBalance)
 {
 	// Arrange
-	Mock<IAccountSummaryReader> reader;
-	When(Method(reader, CurrentBalance)).Return();
-	When(Method(reader, LastTransaction)).Return();
+	MockAccountSummaryReader reader;
+	const int testBalance = 1;
+	EXPECT_CALL(reader, CurrentBalance(30))
+		.Times(1)
+		.WillOnce(Return());
 
 	// Act
-	ReadAccountSummary(reader.get());
-
-	// Assert
-	Verify(Method(reader, CurrentBalance).Using(30.0)).Exactly(Once);
+	ReadAccountSummary(reader);
 }
 
 TEST(AccountSummaryTest, ShouldReadLastTransaction)
 {
 	// Arrange
-	Mock<IAccountSummaryReader> reader;
-	When(Method(reader, CurrentBalance)).Return();
-	When(Method(reader, LastTransaction)).Return();
+	MockAccountSummaryReader reader;
+	const int testBalance = 1;
+	EXPECT_CALL(reader, LastTransaction(A<const LedgerEntry*>()))
+		.Times(1)
+		.WillOnce(Return());
 
 	// Act
-	ReadAccountSummary(reader.get());
-
-	// Assert
-	Verify(Method(reader, LastTransaction)).Exactly(Once);
+	ReadAccountSummary(reader);
 }
