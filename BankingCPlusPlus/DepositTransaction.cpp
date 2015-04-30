@@ -9,13 +9,12 @@ DepositTransaction::DepositTransaction(std::unique_ptr<ILedgerWriter> ledgerWrit
 {
 }
 
-TransactionReceipt DepositTransaction::Execute(AccountState& account, int amountToDepositInPence)
+TransactionOutcome DepositTransaction::Execute(AccountState& account, int amountToDepositInPence)
 {
 	if (m_BusinessRules->IsntAllowed(account, amountToDepositInPence))
 	{
 		// do something
 	}
-	AccountState* newAccount = account.Credit(amountToDepositInPence);
-	TransactionReceipt receipt;
-	return receipt;
+	auto newState = account.Credit(amountToDepositInPence);
+	return TransactionOutcome(std::shared_ptr<AccountState>(newState));
 }

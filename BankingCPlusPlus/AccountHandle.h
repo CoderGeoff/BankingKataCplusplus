@@ -19,6 +19,7 @@ public:
 
 private:
 	AccountState& Get();
+	void Set(AccountState& account);
 	AccountState* m_Account;
 };
 

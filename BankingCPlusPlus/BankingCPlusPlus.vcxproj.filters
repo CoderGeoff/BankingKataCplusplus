@@ -60,6 +60,9 @@
     <ClInclude Include="AccountState.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="TransactionOutcome.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -105,6 +108,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="AccountState.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="TransactionOutcome.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

@@ -10,3 +10,8 @@ AccountState& AccountHandle::Get()
 {
 	return *m_Account;
 }
+
+void AccountHandle::Set(AccountState& account)
+{
+	m_Account = &account;
+}

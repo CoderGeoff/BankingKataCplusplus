@@ -8,6 +8,7 @@
 #include "AccountHandle.h"
 #include "LedgerEntry.h"
 #include "TransactionReceipt.h"
+#include "TransactionOutcome.h"
 #include "DepositTransaction.h"
 #include "DepositCashLedgerWriter.h"
 #include "DepositCashBusinessRules.h"
@@ -38,5 +39,7 @@ BANKINGCPLUSPLUS_API TransactionReceipt DepositCash(AccountHandle accountHandle,
 {
 	auto account = accountHandle.Get();
 	auto transaction = new DepositTransaction(std::make_unique<DepositCashLedgerWriter>(), std::make_unique<DepositCashBusinessRules>());
-	return transaction->Execute(account, amountInPence);
+	TransactionOutcome transactionOutcome = transaction->Execute(account, amountInPence);
+	accountHandle.Set(*transactionOutcome.FinalAccountState().get());
+	return TransactionReceipt();
 }
