@@ -38,5 +38,5 @@ BANKINGCPLUSPLUS_API TransactionReceipt DepositCash(AccountHandle accountHandle,
 {
 	auto account = accountHandle.Get();
 	auto transaction = new DepositTransaction(std::make_unique<DepositCashLedgerWriter>(), std::make_unique<DepositCashBusinessRules>());
-	return transaction->Execute();
+	return transaction->Execute(account, amountInPence);
 }

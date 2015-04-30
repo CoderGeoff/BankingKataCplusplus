@@ -16,3 +16,9 @@ void Account::ReadCurrentBalance(IAccountSummaryReader& reader)
 {
 	reader.CurrentBalance(m_CurrentBalanceInPence);
 }
+
+Account* Account::Credit(int amountInPence)
+{
+	return new Account(m_CurrentBalanceInPence + amountInPence);
+}
+

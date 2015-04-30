@@ -1,5 +1,6 @@
 #include "stdafx.h"
 #include "DepositTransaction.h"
+#include "Account.h"
 
 
 DepositTransaction::DepositTransaction(std::unique_ptr<ILedgerWriter> ledgerWriter, std::unique_ptr<IBusinessRules> rules) :
@@ -8,9 +9,13 @@ DepositTransaction::DepositTransaction(std::unique_ptr<ILedgerWriter> ledgerWrit
 {
 }
 
-
-TransactionReceipt DepositTransaction::Execute()
+TransactionReceipt DepositTransaction::Execute(Account& account, int amountToDepositInPence)
 {
+	if (m_BusinessRules->IsntAllowed(account, amountToDepositInPence))
+	{
+		// do something
+	}
+	Account* newAccount = account.Credit(amountToDepositInPence);
 	TransactionReceipt receipt;
 	return receipt;
 }

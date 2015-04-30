@@ -2,11 +2,7 @@
 #include "DepositCashBusinessRules.h"
 
 
-DepositCashBusinessRules::DepositCashBusinessRules()
+bool DepositCashBusinessRules::IsntAllowed(const Account& account, int amountToDepositInPence) const
 {
-}
-
-
-DepositCashBusinessRules::~DepositCashBusinessRules()
-{
+	return amountToDepositInPence > 0;
 }

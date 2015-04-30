@@ -1,10 +1,10 @@
 #pragma once
 #include "IBusinessRules.h"
+class Account;
 
 class DepositCashBusinessRules : public IBusinessRules
 {
 public:
-	DepositCashBusinessRules();
-	~DepositCashBusinessRules();
+	virtual bool IsntAllowed(const Account& account, int amountToDepositInPence) const;
 };
 
