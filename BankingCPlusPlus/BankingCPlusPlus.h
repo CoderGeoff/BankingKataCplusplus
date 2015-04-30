@@ -17,7 +17,7 @@ class TransactionReceipt;
 
 BANKINGCPLUSPLUS_API AccountHandle OpenAccount();
 BANKINGCPLUSPLUS_API void ReadAccountSummary(AccountHandle handle, IAccountSummaryReader& reader);
-BANKINGCPLUSPLUS_API TransactionReceipt DepositCash(int amountInPence);
+BANKINGCPLUSPLUS_API TransactionReceipt DepositCash(AccountHandle handle, int amountInPence);
 
 extern BANKINGCPLUSPLUS_API int nBankingCPlusPlus;
 

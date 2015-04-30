@@ -31,7 +31,7 @@ BANKINGCPLUSPLUS_API void ReadAccountSummary(AccountHandle accountHandle, IAccou
 	reader.LastTransaction(new LedgerEntry());
 }
 
-BANKINGCPLUSPLUS_API TransactionReceipt DepositCash(int amountInPence)
+BANKINGCPLUSPLUS_API TransactionReceipt DepositCash(AccountHandle handle, int amountInPence)
 {
 	TransactionReceipt receipt;
 	return receipt;
