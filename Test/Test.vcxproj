@@ -82,6 +82,7 @@
     <ClInclude Include="targetver.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="AccountTests.cpp" />
     <ClCompile Include="CashUserTransactionTests.cpp" />
     <ClCompile Include="MockAccountSummaryReader.cpp" />
     <ClCompile Include="MockTransactionReceiptReader.cpp" />
