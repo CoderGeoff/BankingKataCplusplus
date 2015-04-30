@@ -4,7 +4,7 @@
 #include "stdafx.h"
 #include "BankingCPlusPlus.h"
 #include "IAccountSummaryReader.h"
-#include "Account.h"
+#include "AccountState.h"
 #include "AccountHandle.h"
 #include "LedgerEntry.h"
 #include "TransactionReceipt.h"
@@ -23,7 +23,7 @@ BANKINGCPLUSPLUS_API int fnBankingCPlusPlus(void)
 
 BANKINGCPLUSPLUS_API AccountHandle OpenAccount()
 {
-	Account* account = Account::OpenNew();
+	AccountState* account = AccountState::OpenNew();
 	return AccountHandle(*account);
 }
 

@@ -5,6 +5,6 @@ class Account;
 class DepositCashBusinessRules : public IBusinessRules
 {
 public:
-	virtual bool IsntAllowed(const Account& account, int amountToDepositInPence) const;
+	virtual bool IsntAllowed(const AccountState& account, int amountToDepositInPence) const;
 };
 

@@ -2,14 +2,14 @@
 
 class IAccountSummaryReader;
 
-class Account
+class AccountState
 {
 public:
-	static Account* OpenNew();
+	static AccountState* OpenNew();
 	void ReadCurrentBalance(IAccountSummaryReader& reader);
-	Account* Credit(int amountInPence);
+	AccountState* Credit(int amountInPence);
 private:
-	Account(int currentBalanceInPence);
+	AccountState(int currentBalanceInPence);
 
 	int m_CurrentBalanceInPence;
 };

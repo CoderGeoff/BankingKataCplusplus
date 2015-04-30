@@ -7,19 +7,19 @@
 
 #include "TransactionReceipt.h"
 
-class Account; 
+class AccountState;
 class IAccountSummaryReader;
 
 BANKINGCPLUSPLUS_API class AccountHandle
 {
 public:
-	AccountHandle(Account& account);
+	AccountHandle(AccountState& account);
 	friend BANKINGCPLUSPLUS_API void ReadAccountSummary(AccountHandle account, IAccountSummaryReader& reader);
 	friend BANKINGCPLUSPLUS_API TransactionReceipt DepositCash(AccountHandle accountHandle, int amountInPence);
 
 private:
-	Account& Get();
-	Account* m_Account;
+	AccountState& Get();
+	AccountState* m_Account;
 };
 
 

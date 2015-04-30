@@ -74,7 +74,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="Account.h" />
+    <ClInclude Include="AccountState.h" />
     <ClInclude Include="AccountHandle.h" />
     <ClInclude Include="BankingCPlusPlus.h" />
     <ClInclude Include="DepositCashBusinessRules.h" />
@@ -91,7 +91,7 @@
     <ClInclude Include="TransactionReceipt.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Account.cpp" />
+    <ClCompile Include="AccountState.cpp" />
     <ClCompile Include="AccountHandle.cpp" />
     <ClCompile Include="BankingCPlusPlus.cpp" />
     <ClCompile Include="DepositCashBusinessRules.cpp" />
