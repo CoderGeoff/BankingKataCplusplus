@@ -83,6 +83,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="AccountTests.cpp" />
+    <ClCompile Include="CashTests.cpp" />
     <ClCompile Include="MockAccountSummaryReader.cpp" />
     <ClCompile Include="MockTransactionReceiptReader.cpp" />
     <ClCompile Include="stdafx.cpp">
