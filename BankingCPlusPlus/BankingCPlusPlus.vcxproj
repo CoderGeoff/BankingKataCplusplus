@@ -77,8 +77,13 @@
     <ClInclude Include="Account.h" />
     <ClInclude Include="AccountHandle.h" />
     <ClInclude Include="BankingCPlusPlus.h" />
+    <ClInclude Include="DepositCashBusinessRules.h" />
+    <ClInclude Include="DepositCashLedgerWriter.h" />
+    <ClInclude Include="DepositTransaction.h" />
     <ClInclude Include="IAccountSummaryReader.h" />
+    <ClInclude Include="IBusinessRules.h" />
     <ClInclude Include="ILedgerEntryReader.h" />
+    <ClInclude Include="ILedgerWriter.h" />
     <ClInclude Include="ITransactionReceiptReader.h" />
     <ClInclude Include="LedgerEntry.h" />
     <ClInclude Include="stdafx.h" />
@@ -89,6 +94,9 @@
     <ClCompile Include="Account.cpp" />
     <ClCompile Include="AccountHandle.cpp" />
     <ClCompile Include="BankingCPlusPlus.cpp" />
+    <ClCompile Include="DepositCashBusinessRules.cpp" />
+    <ClCompile Include="DepositCashLedgerWriter.cpp" />
+    <ClCompile Include="DepositTransaction.cpp" />
     <ClCompile Include="dllmain.cpp">
       <CompileAsManaged Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</CompileAsManaged>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
@@ -98,7 +106,9 @@
       </PrecompiledHeader>
     </ClCompile>
     <ClCompile Include="IAccountSummaryReader.cpp" />
+    <ClCompile Include="IBusinessRules.cpp" />
     <ClCompile Include="ILedgerEntryReader.cpp" />
+    <ClCompile Include="ILedgerWriter.cpp" />
     <ClCompile Include="ITransactionReceiptReader.cpp" />
     <ClCompile Include="LedgerEntry.cpp" />
     <ClCompile Include="stdafx.cpp">

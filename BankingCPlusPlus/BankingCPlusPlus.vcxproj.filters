@@ -45,6 +45,21 @@
     <ClInclude Include="AccountHandle.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="DepositTransaction.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DepositCashLedgerWriter.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DepositCashBusinessRules.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ILedgerWriter.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="IBusinessRules.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -75,6 +90,21 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="AccountHandle.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DepositTransaction.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DepositCashLedgerWriter.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DepositCashBusinessRules.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ILedgerWriter.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="IBusinessRules.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

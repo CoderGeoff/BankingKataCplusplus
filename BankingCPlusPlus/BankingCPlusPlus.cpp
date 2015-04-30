@@ -8,6 +8,9 @@
 #include "AccountHandle.h"
 #include "LedgerEntry.h"
 #include "TransactionReceipt.h"
+#include "DepositTransaction.h"
+#include "DepositCashLedgerWriter.h"
+#include "DepositCashBusinessRules.h"
 
 // This is an example of an exported variable
 BANKINGCPLUSPLUS_API int nBankingCPlusPlus=0;
@@ -31,8 +34,9 @@ BANKINGCPLUSPLUS_API void ReadAccountSummary(AccountHandle accountHandle, IAccou
 	reader.LastTransaction(new LedgerEntry());
 }
 
-BANKINGCPLUSPLUS_API TransactionReceipt DepositCash(AccountHandle handle, int amountInPence)
+BANKINGCPLUSPLUS_API TransactionReceipt DepositCash(AccountHandle accountHandle, int amountInPence)
 {
-	TransactionReceipt receipt;
-	return receipt;
+	auto account = accountHandle.Get();
+	auto transaction = new DepositTransaction(std::make_unique<DepositCashLedgerWriter>(), std::make_unique<DepositCashBusinessRules>());
+	return transaction->Execute();
 }
